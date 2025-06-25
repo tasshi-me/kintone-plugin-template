@@ -1,0 +1,33 @@
+{
+  "$schema": "https://raw.githubusercontent.com/kintone/js-sdk/%40kintone/plugin-manifest-validator%4010.2.0/packages/plugin-manifest-validator/manifest-schema.json",
+  "manifest_version": 1,
+  "version": 1,
+  "type": "APP",
+  "icon": "image/icon.png",
+  "name": {
+    "en": "kintone-plugin-template",
+    "ja": "kintoneプラグイン開発テンプレート"
+  },
+  "description": {
+    "en": "Template for kintone plugin",
+    "ja": "kintoneプラグインの開発テンプレートです。"
+  },
+  "homepage_url": {
+    "en": "https://github.com/tasshi-me/kintone-plugin-template",
+    "ja": "https://github.com/tasshi-me/kintone-plugin-template"
+  },
+  "desktop": {
+    "js": ["js/desktop.js"],
+    "css": ["css/desktop.css"]
+  },
+  "mobile": {
+    "js": ["js/mobile.js"],
+    "css": ["css/mobile.css"]
+  },
+  "config": {
+    "html": "html/config.html",
+    "js": ["js/config.js"],
+    "css": ["css/config.css"],
+    "required_params": ["message"]
+  }
+}

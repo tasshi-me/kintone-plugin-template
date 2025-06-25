@@ -1,0 +1,45 @@
+{
+  "name": "kintone-plugin-template",
+  "version": "0.1.0",
+  "private": true,
+  "description": "kintoneプラグインの開発テンプレート",
+  "license": "MIT",
+  "author": "tasshi <tasshi.me@gmail.com>",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "run-s build:js build:package",
+    "build:js": "rsbuild build",
+    "build:package": "kintone-plugin-packer --ppk private.ppk --out dist/plugin.zip lib",
+    "fix": "run-p fix:*",
+    "fix:eslint": "run-s 'lint:eslint -- --fix'",
+    "fix:prettier": "run-s 'lint:prettier -- --write'",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint . --max-warnings 0",
+    "lint:prettier": "prettier --check '**/*.{json,json5,md,yml,yaml}' --cache",
+    "start": "node scripts/npm-start.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "upload": "kintone-plugin-uploader dist/plugin.zip --waiting-dialog-ms 3000 --watch"
+  },
+  "dependencies": {
+    "@kintone/rest-api-client": "^5.7.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@cybozu/eslint-config": "^24.0.0",
+    "@kintone/dts-gen": "^8.1.2",
+    "@kintone/plugin-packer": "^8.2.1",
+    "@kintone/plugin-uploader": "^9.1.5",
+    "@rsbuild/core": "^1.3.22",
+    "@rsbuild/plugin-react": "^1.3.2",
+    "@rsbuild/plugin-type-check": "^1.2.3",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "eslint": "^9.29.0",
+    "eslint-plugin-package-json": "^0.34.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,0 +1,29 @@
+## Editors
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+## Dependencies
+node_modules
+
+## Env
+.env
+.envrc
+
+## Private Key
+*.ppk
+
+## Logs
+*.log*
+npm-debug.log*
+
+## Artifacts
+/lib
+/dist
+
+# Profile
+.rspack-profile-*/
+
+## Misc
+.DS_Store
+*.local
